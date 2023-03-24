@@ -1,0 +1,41 @@
+html {
+    background: linear-gradient(#9a9aff, #ff5bff, #85edff);
+    height: 100%;
+    font-size:  16px;
+
+}
+
+.calc {
+    background-image: url(ceu.jpg);
+    padding: 30px;
+    margin: auto;
+    max-width: 50%;
+    border-radius: 20px;
+    font-size: 18px;
+
+}
+
+h1 {
+    color: #000000;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+h2 {
+    padding-bottom: 25px;
+}
+
+.btn {
+    border: none;
+    padding: 10px 20px 10px 20px;
+    border-radius: 8px;
+    background-color: white ;
+    cursor: pointer;
+    font-size: 16px;
+
+
+
+
+}

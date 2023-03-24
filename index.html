@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=devide-width, initial-scale=1.0" />
+    <title>CALCULADORA DE IMC</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Calculadora de IMC</h1>
+    </header>
+    <main>
+        <div class="calc">
+            <h2>Coloque suas informações aqui para calcular seu IMC</h2>
+            <label for="altura">Sua Altura: </label>
+            <input type="number" name="altura" id="altura" required />
+            <br />
+            <br />
+            <label for="peso">Seu Peso: </label>
+            <input TYPE="number" name="peso" id="peso" required />
+            <br />
+            <br />
+            <button onclick="calcular()" class="btn">Calcular</button>
+            <br />
+            <br />
+
+            <h3>Resultado:</h3>
+            <span id="resultado"></span>
+        </div>
+    </main>
+    <script>
+        function calcular() {
+            let peso = document.getElementById("peso").value;
+            let altura = document.getElementById("altura").value;
+            let imc = peso / (altura * altura);
+            if (imc < 18.5) {
+                resultado.innerHTML = `Seu resultado é: ${(imc.toFixed(2))}. Você está: Abaixo do Peso`;
+            } else if (imc > 18.5 && imc <= 24.9) {
+                resultado.innerHTML = `Seu resultado é ${(imc.toFixed(2))}. Seu peso é: Peso Ideal`;
+
+            } else if (imc >= 25 && imc <= 29.9) {
+                resultado.innerHTML = `Seu resulatado é ${(imc.toFixed(2))}. Seu grau é: Acima do peso.`;
+
+            } else if (imc >= 30 && imc <= 34.9) {
+                resultado.innerHTML = `Seu resultado é ${(imc.toFixed(2))}. Seu grau é: Obesidade grau I.`;
+
+            } else if (imc >= 35 && imc <= 39.9) {
+                resultado.innerHTML = `Seu resultado é ${(imc.toFixed(2))}. Seu grau é: Obesidade grau II.`;
+            } else {
+                resultado.innerHTML = `Seu resultado é ${(imc.toFixed(2))}. Seu grau é: Obesidade grau III.`;
+
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
